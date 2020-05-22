@@ -1,0 +1,4 @@
+public interface IEating {
+    public void haveBreakfast();
+    public void haveDinner();
+}

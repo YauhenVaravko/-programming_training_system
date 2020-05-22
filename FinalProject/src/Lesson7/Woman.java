@@ -1,0 +1,10 @@
+public class Woman extends Person{
+
+    public void haveBreakfast() {
+        System.out.println("Девушка завтракает");
+    }
+
+    public void haveDinner() {
+        System.out.println("Девушка обедает");
+    }
+}

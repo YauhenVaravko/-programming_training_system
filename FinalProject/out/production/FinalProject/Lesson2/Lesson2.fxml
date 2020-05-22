@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="les2_main_scroll_panel" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minViewportHeight="710.0" minViewportWidth="1280.0" minWidth="1280.0" prefHeight="1270.0" prefViewportHeight="710.0" prefViewportWidth="1280.0" prefWidth="1280.0" style="-fx-background-color: #2D2F34;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Lesson2.Lesson2Controller">
+    <content>
+        <AnchorPane fx:id="les2_main_panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="669.0" minWidth="1213.0" opacity="0.8" prefHeight="1268.0" prefWidth="1278.0" style="-fx-background-color: #2D2F34;">
+            <children>
+                <Label fx:id="title_text" alignment="TOP_CENTER" layoutX="374.0" layoutY="8.0" text="Занятие 2.  &quot;Работа с циклами&quot;" textAlignment="JUSTIFY" textFill="WHITE">
+                    <font>
+                        <Font name="Times New Roman Bold" size="36.0" />
+                    </font>
+               <effect>
+                  <ColorAdjust contrast="1.0" hue="1.0" />
+               </effect>
+                </Label>
+            <Label fx:id="task_text" accessibleRole="TEXT_AREA" alignment="TOP_LEFT" graphicTextGap="0.0" layoutX="14.0" layoutY="77.0" opacity="0.92" prefHeight="298.0" prefWidth="1255.0" text="Задание:&#10;      Вывести на консоль сообщение вида &quot;0_1_2_3_4_5_6_7_8_9_&quot;.&#10;                                                                            0_1_2_3_4_5_6_7_8_ &#10;                                                                            ...&#10;                                                                            0_1_ &#10;                                                                            0_&#10;                                                                            &#10;Требование:&#10;      - Программа должна выводить сообщение согласно заданию. (без ковычек и в качестве разделителя между символами использовать нижнее подчеркивание).&#10;      - Текст программы должен включать публичный статический метод main.&#10;      - Имя класса должно быть Lesson2 и он должен быть публичным.&#10;      - Необходимо использовать 2 цикла for.&#10;&#10;Чтобы ознакомится с теорией, перейдите по &#10;&#10;&#10;" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+               <effect>
+                  <ColorAdjust contrast="1.0" />
+               </effect>
+            </Label>
+            <TextArea fx:id="console_text_area" editable="false" layoutX="51.0" layoutY="998.0" prefHeight="144.0" prefWidth="1160.0" style="-fx-control-inner-background: #27292D;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextArea>
+            <Label layoutX="51.0" layoutY="920.0" prefHeight="66.0" prefWidth="353.0" text="Результат вывода на консоль:" textFill="#fffefe">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="check_button" layoutX="1101.0" layoutY="1159.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="112.0" style="-fx-background-color: #0D770F;" text="Проверка" textFill="#b2b2b2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <ColorAdjust contrast="1.0" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="run_button" layoutX="1101.0" layoutY="935.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: #0D770F;" text="Запуск" textFill="#b2b2b2">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+               <effect>
+                  <ColorAdjust contrast="1.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            
+            <Button fx:id="reset_button" layoutX="964.0" layoutY="934.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: #945D0B;" text="Сброс" textAlignment="CENTER" textFill="#b2b2b2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <ColorAdjust contrast="1.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TabPane fx:id="code_tab_pane" layoutX="52.0" layoutY="391.0" prefHeight="523.0" prefWidth="1158.0" style="-fx-background-color: #27292D;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="lesson2_tab" text="Lesson2.java">
+                     <content>
+                        <TextArea fx:id="code_text_area_lesson2" prefHeight="200.0" prefWidth="1158.0" style="-fx-control-inner-background: #27292D;">
+                           <font>
+                              <Font name="Georgia" size="15.0" />
+                           </font>
+                        </TextArea>
+                     </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Button fx:id="close_window_button" layoutX="1229.0" mnemonicParsing="false" style="-fx-background-color: #2D2F34;" text="X" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="minimize_window_button" layoutX="1196.0" layoutY="-5.0" mnemonicParsing="false" style="-fx-background-color: #2D2F34;" text="_" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Hyperlink fx:id="link_to_theory" graphicTextGap="0.0" layoutX="357.0" layoutY="344.0" text="ссылке." textFill="#4124c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Hyperlink>
+                <Button fx:id="to_menu_button" alignment="TOP_LEFT" layoutX="6.0" layoutY="7.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="159.0" style="-fx-background-color: #2D2F34;" text="← На главную" textFill="WHITE">
+                    <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

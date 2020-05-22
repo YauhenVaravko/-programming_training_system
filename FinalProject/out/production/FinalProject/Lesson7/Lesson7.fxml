@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="les_main_scroll_panel" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minViewportHeight="710.0" minViewportWidth="1280.0" minWidth="1280.0" prefHeight="1270.0" prefViewportHeight="710.0" prefViewportWidth="1280.0" prefWidth="1280.0" style="-fx-background-color: #2D2F34;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Lesson7.Lesson7Controller">
+    <content>
+        <AnchorPane fx:id="les_main_panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="669.0" minWidth="1213.0" opacity="0.8" prefHeight="1268.0" prefWidth="1278.0" style="-fx-background-color: #2D2F34;">
+            <children>
+                <Label fx:id="title_text" alignment="TOP_CENTER" layoutX="318.0" layoutY="19.0" text="Занятие 7.  &quot;Интерфейсы и аннотации&quot;" textAlignment="JUSTIFY" textFill="WHITE">
+                    <font>
+                        <Font name="Times New Roman Bold" size="36.0" />
+                    </font>
+               <effect>
+                  <ColorAdjust contrast="1.0" hue="1.0" />
+               </effect>
+                </Label>
+            <Label fx:id="task_text" accessibleRole="TEXT_AREA" alignment="TOP_LEFT" graphicTextGap="0.0" layoutX="14.0" layoutY="77.0" opacity="0.92" prefHeight="380.0" prefWidth="1255.0" text="Задание:&#10;      Используя интерфейсы огранизовать выполнение программы таким образом, чтобы при запуске программы в консоль было выведено сообщение&#10; &quot;Девушка завтракает&quot;&#10;   Девушка обедает                &#10;   &#10;Примечание : &#10;      Класс Lesson7 недоступен для изменения.&#10;&#10;Требование:&#10;      - Класс Person должен реализовать интерфейс IEating.&#10;      - Класс Woman должен быть классом-потомком класса Person. &#10;      - Публичный метод haveBreakfast класса Woman должен выводить на консоль сообщение &quot;Девушка завтракает&quot;.&#10;      - Публичный метод haveDinner класса Woman должен выводить на консоль сообщение &quot;Девушка обедает&quot;.&#10;      - Результат выполнения программы должен соответсвовать заданию.&#10;      &#10;Чтобы ознакомится с теорией, перейдите по &#10;&#10;&#10;" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+               <effect>
+                  <ColorAdjust contrast="1.0" />
+               </effect>
+            </Label>
+            <TextArea fx:id="console_text_area" editable="false" layoutX="50.0" layoutY="1059.0" prefHeight="144.0" prefWidth="1160.0" style="-fx-control-inner-background: #27292D;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextArea>
+            <Label layoutX="51.0" layoutY="992.0" prefHeight="66.0" prefWidth="353.0" text="Результат вывода на консоль:" textFill="#fffefe">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="check_button" layoutX="1100.0" layoutY="1215.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="112.0" style="-fx-background-color: #0D770F;" text="Проверка" textFill="#b2b2b2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <ColorAdjust contrast="1.0" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="run_button" layoutX="1101.0" layoutY="1007.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: #0D770F;" text="Запуск" textFill="#b2b2b2">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+               <effect>
+                  <ColorAdjust contrast="1.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            
+            <Button fx:id="reset_button" layoutX="971.0" layoutY="1006.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="111.0" style="-fx-background-color: #945D0B;" text="Сброс" textAlignment="CENTER" textFill="#b2b2b2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <ColorAdjust contrast="1.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TabPane fx:id="code_tab_pane" layoutX="51.0" layoutY="456.0" prefHeight="523.0" prefWidth="1158.0" style="-fx-background-color: #27292D;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="lesson7_tab" text="Lesson7.java">
+                     <content>
+                        <TextArea fx:id="code_text_area_lesson7" editable="false" prefHeight="200.0" prefWidth="1158.0" style="-fx-control-inner-background: #27292D;">
+                           <font>
+                              <Font name="Georgia" size="15.0" />
+                           </font>
+                        </TextArea>
+                     </content>
+                </Tab>
+                  <Tab fx:id="person_tab" text="Person.java">
+                     <content>
+                        <TextArea fx:id="code_text_area_person" prefHeight="200.0" prefWidth="1158.0" style="-fx-control-inner-background: #27292D;">
+                           <font>
+                              <Font name="Georgia" size="15.0" />
+                           </font>
+                        </TextArea>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="woman_tab" text="Woman.java">
+                     <content>
+                        <TextArea fx:id="code_text_area_woman" prefHeight="200.0" prefWidth="1158.0" style="-fx-control-inner-background: #27292D;">
+                           <font>
+                              <Font name="Georgia" size="15.0" />
+                           </font>
+                        </TextArea>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="ieating_tab" text="IEating.java">
+                     <content>
+                        <TextArea fx:id="code_text_area_ieating" prefHeight="200.0" prefWidth="1158.0" style="-fx-control-inner-background: #27292D;">
+                           <font>
+                              <Font name="Georgia" size="15.0" />
+                           </font>
+                        </TextArea>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Button fx:id="close_window_button" layoutX="1229.0" mnemonicParsing="false" style="-fx-background-color: #2D2F34;" text="X" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="minimize_window_button" layoutX="1196.0" layoutY="-5.0" mnemonicParsing="false" style="-fx-background-color: #2D2F34;" text="_" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Hyperlink fx:id="link_to_theory" graphicTextGap="0.0" layoutX="357.0" layoutY="385.0" text="ссылке." textFill="#4124c6">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Hyperlink>
+                <Button fx:id="to_menu_button" alignment="TOP_LEFT" layoutX="6.0" layoutY="7.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="159.0" style="-fx-background-color: #2D2F34;" text="← На главную" textFill="WHITE">
+                    <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

@@ -1,0 +1,8 @@
+public class Lesson7{
+
+    public static void main(String[] args){
+        Person woman = new Woman();
+        woman.haveBreakfast();
+        woman.haveDinner();
+    }
+}
